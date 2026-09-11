@@ -1,4 +1,4 @@
-# FlexSip FlexBottle Demo
+# FlexSith FlexBottle Demo
 
 A presentation-ready responsive website + PWA demo based on the team's handwritten concept.
 
