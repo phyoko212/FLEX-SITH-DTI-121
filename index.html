@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="description" content="FlexSip FlexBottle — collapsible water bottle with interchangeable smart modules.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <title>FlexSip — FlexBottle</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#home"><span class="brand-mark">F</span><span>Flex<span>Sip</span></span></a>
+      <nav class="desktop-nav">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#modules">Modules</a>
+        <a href="#business">Business</a>
+      </nav>
+      <div class="top-actions">
+        <button class="icon-btn" onclick="showToast('Your account is ready for demo checkout.')">♡</button>
+        <button class="cart-btn" onclick="openCart()">Cart <b id="cartCount">0</b></button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero section">
+        <div class="hero-copy">
+          <div class="eyebrow">FLEX SIP • SMART HYDRATION</div>
+          <h1>Carry less.<br><span>Do more.</span></h1>
+          <p>FlexBottle is a 500ml collapsible water bottle with a twist-lock base and interchangeable modules for travel, study, work and outdoor adventures.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#shop">Shop FlexBottle — ฿799</a>
+            <button class="btn secondary" onclick="showDemo()">▶ View Product Demo</button>
+          </div>
+          <div class="trust-row">
+            <span>✓ Foldable design</span><span>✓ 500ml capacity</span><span>✓ Modular base</span>
+          </div>
+        </div>
+        <div class="hero-product">
+          <div class="glow"></div>
+          <div class="bottle" id="heroBottle">
+            <div class="bottle-cap"></div>
+            <div class="bottle-neck"></div>
+            <div class="bottle-body">
+              <div class="water-line"></div>
+              <div class="logo-mini">FLEX<br>SIP</div>
+              <div class="capacity">500 ML</div>
+            </div>
+            <div class="bottle-base"></div>
+          </div>
+          <div class="module-pill">+ INTERCHANGEABLE MODULES</div>
+        </div>
+      </section>
+
+      <section class="stats-strip">
+        <div><strong>500ml</strong><span>Capacity</span></div>
+        <div><strong>12–24h</strong><span>Hot / cold concept</span></div>
+        <div><strong>฿799</strong><span>Base bottle</span></div>
+        <div><strong>฿1,299</strong><span>Power Bank Bundle</span></div>
+      </section>
+
+      <section id="shop" class="section">
+        <div class="section-head"><div><div class="eyebrow">SHOP</div><h2>Build your FlexBottle</h2></div><p>Choose a base and add the module that fits your day.</p></div>
+        <div class="product-grid">
+          <article class="product-card featured">
+            <div class="product-art"><div class="bottle small"><div class="bottle-cap"></div><div class="bottle-neck"></div><div class="bottle-body"><div class="logo-mini">FLEX<br>SIP</div></div><div class="bottle-base"></div></div></div>
+            <div class="tag">BEST STARTER</div><h3>FlexBottle 500ml</h3><p>Collapsible food-grade silicone bottle with twist-lock modular base.</p>
+            <div class="price">฿799</div><button class="btn primary full" onclick="addToCart('FlexBottle 500ml',799)">Add to Cart</button>
+          </article>
+          <article class="product-card">
+            <div class="product-art power"><span>⚡</span><small>POWER</small></div>
+            <div class="tag blue">MOST POPULAR</div><h3>FlexBottle + Power Bank</h3><p>FlexBottle bundled with an interchangeable power-bank module.</p>
+            <div class="price">฿1,299</div><button class="btn primary full" onclick="addToCart('FlexBottle + Power Bank',1299)">Add to Cart</button>
+          </article>
+          <article class="product-card">
+            <div class="product-art lamp"><span>☼</span><small>LAMP</small></div>
+            <div class="tag">ACCESSORY</div><h3>Lamp Light Module</h3><p>Compact attachable light for camping, studying and emergencies.</p>
+            <div class="price">฿299</div><button class="btn outline full" onclick="addToCart('Lamp Light Module',299)">Add to Cart</button>
+          </article>
+          <article class="product-card">
+            <div class="product-art blender"><span>✦</span><small>BLENDER</small></div>
+            <div class="tag">ACCESSORY</div><h3>Juice Blender Module</h3><p>Interchangeable concept module for smoothies and fresh drinks.</p>
+            <div class="price">฿399</div><button class="btn outline full" onclick="addToCart('Juice Blender Module',399)">Add to Cart</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="modules" class="section alt">
+        <div class="section-head"><div><div class="eyebrow">ONE BASE • MANY USES</div><h2>Switch modules in seconds</h2></div><p>Twist the folded section left or right to engage the lock mechanism.</p></div>
+        <div class="module-demo">
+          <div class="steps">
+            <div class="step active"><b>01</b><span>Fold</span><small>Collapse the bottle to save bag space.</small></div>
+            <div class="step"><b>02</b><span>Twist</span><small>Rotate the base to unlock the module.</small></div>
+            <div class="step"><b>03</b><span>Swap</span><small>Attach Power, Lamp or Blender modules.</small></div>
+          </div>
+          <div class="swap-stage">
+            <div class="ring"></div><div class="bottle swap-bottle"><div class="bottle-cap"></div><div class="bottle-neck"></div><div class="bottle-body"><div class="logo-mini">FLEX<br>SIP</div></div><div class="bottle-base"></div></div>
+            <div class="floating-card"><span>⚡</span><b>Power Bank</b><small>Ready to swap</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section problem">
+        <div class="problem-copy"><div class="eyebrow">CUSTOMER PROBLEM</div><h2>One bottle. Less luggage.</h2><p>Students, office workers, travelers, hikers and campers often carry a water bottle plus small gadgets. FlexSip combines functions while saving bag space.</p></div>
+        <div class="problem-cards">
+          <div><span>🎒</span><b>Too much to carry</b><small>Bottle + gadgets take valuable space.</small></div>
+          <div><span>🔋</span><b>Phone battery runs out</b><small>Power module gives the bottle a second job.</small></div>
+          <div><span>♻️</span><b>More sustainable</b><small>One modular base can support multiple attachments.</small></div>
+        </div>
+      </section>
+
+      <section id="business" class="section business">
+        <div class="section-head"><div><div class="eyebrow">BUSINESS DEMO</div><h2>Simple, realistic unit economics</h2></div><p>Demo figures based on the team's proposed ฿799 base product.</p></div>
+        <div class="finance-grid">
+          <div class="finance-card"><span>Selling Price</span><strong>฿799</strong><small>500ml base bottle</small></div>
+          <div class="finance-card"><span>Variable Cost</span><strong>฿350</strong><small>materials + production + fulfillment</small></div>
+          <div class="finance-card"><span>Contribution</span><strong>฿449</strong><small>per base bottle</small></div>
+          <div class="finance-card"><span>Fixed Costs</span><strong>฿80K</strong><small>monthly operating estimate</small></div>
+        </div>
+        <div class="bep-panel">
+          <div><h3>Break-Even Point</h3><p>Fixed Costs ÷ Contribution Margin</p><div class="bep-number">179 <small>bottles / month</small></div><div class="progress"><i style="width:44.75%"></i></div><div class="bep-meta"><span>BEP Sales <b>฿143,021</b></span><span>Target <b>400 units</b></span><span>Projected Profit <b>฿99,600</b></span></div></div>
+          <div class="cost-list"><h3>Variable Cost Breakdown</h3><div><span>Food-grade silicone</span><b>฿80</b></div><div><span>Cap + hard plastic</span><b>฿60</b></div><div><span>Metal / magnetic contacts</span><b>฿40</b></div><div><span>Labor + electricity</span><b>฿70</b></div><div><span>Eco packaging</span><b>฿40</b></div><div><span>Fees + delivery allocation</span><b>฿60</b></div><div class="total"><span>Total</span><b>฿350</b></div></div>
+        </div>
+      </section>
+
+      <section class="section audience">
+        <div class="eyebrow">TARGET MARKET</div><h2>Designed for people on the move.</h2>
+        <div class="audience-grid"><div>🎓<b>Students</b><span>Campus & study life</span></div><div>💻<b>Office Workers</b><span>Workday essentials</span></div><div>🥾<b>Travelers</b><span>Hikers & campers</span></div><div>📱<b>Tech Users</b><span>Portable gadgets</span></div></div>
+      </section>
+    </main>
+
+    <footer><div class="brand"><span class="brand-mark">F</span><span>Flex<span>Sip</span></span></div><p>Smart hydration. Modular lifestyle.</p><div>© 2026 FlexSip Demo • SITM</div></footer>
+  </div>
+
+  <div class="modal hidden" id="cartModal"><div class="modal-box"><button class="close" onclick="closeCart()">×</button><div class="eyebrow">YOUR CART</div><h2>FlexSip order</h2><div id="cartItems"></div><div class="cart-total"><span>Total</span><b id="cartTotal">฿0</b></div><button class="btn primary full" onclick="checkout()">Demo Checkout</button></div></div>
+  <div class="modal hidden" id="demoModal"><div class="modal-box demo-modal"><button class="close" onclick="hideDemo()">×</button><div class="eyebrow">INTERACTIVE DEMO</div><h2>Collapse → Twist → Swap</h2><div class="demo-bottle-wrap"><div class="bottle demo-bottle" id="demoBottle"><div class="bottle-cap"></div><div class="bottle-neck"></div><div class="bottle-body"><div class="logo-mini">FLEX<br>SIP</div></div><div class="bottle-base"></div></div></div><button class="btn primary" id="demoAction" onclick="runDemoStep()">Collapse Bottle</button><p id="demoText">Click the button to demonstrate the product concept.</p></div></div>
+
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
