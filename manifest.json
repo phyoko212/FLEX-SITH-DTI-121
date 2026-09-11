@@ -1,10 +1,10 @@
 {
   "name":"FlexSip FlexBottle Demo",
-  "short_name":"FlexSip",
+  "short_name":"FlexSith",
   "start_url":"./",
   "display":"standalone",
   "background_color":"#f7faff",
   "theme_color":"#2563eb",
-  "description":"FlexSip modular collapsible water bottle business demo",
+  "description":"FlexSith modular collapsible water bottle business demo",
   "icons":[]
 }
